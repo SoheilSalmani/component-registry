@@ -1,13 +1,16 @@
-import * as React from "react"
-import { OpenInV0Button } from "@/components/open-in-v0-button"
-import { HelloWorld } from "@/registry/new-york/blocks/hello-world/hello-world"
-import { ExampleForm } from "@/registry/new-york/blocks/example-form/example-form"
-import PokemonPage from "@/registry/new-york/blocks/complex-component/page"
-import { ExampleCard } from "@/registry/new-york/blocks/example-with-css/example-card"
-// This page displays items from the custom registry.
-// You are free to implement this with your own design as needed.
+import * as React from "react";
+import { OpenInV0Button } from "@/components/open-in-v0-button";
+import { HelloWorld } from "@/registry/new-york/blocks/hello-world/hello-world";
+import { ExampleForm } from "@/registry/new-york/blocks/example-form/example-form";
+import PokemonPage from "@/registry/new-york/blocks/complex-component/page";
+import { ExampleCard } from "@/registry/new-york/blocks/example-with-css/example-card";
+import { AndroidDeviceMock } from "@/registry/new-york/ui/android-device-mock";
+import IphoneDeviceMock from "@/registry/new-york/ui/iphone-device-mock";
+import IpadDeviceMock from "@/registry/new-york/ui/ipad-device-mock";
+import { SafariAppMock } from "@/registry/new-york/ui/safari-app-mock";
+import { AppShowcase } from "@/registry/new-york/ui/app-showcase";
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
       <header className="flex flex-col gap-1">
@@ -63,8 +66,69 @@ export default function Home() {
           <div className="flex items-center justify-center min-h-[400px] relative">
             <ExampleCard />
           </div>
+          Home
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              A Android device mock component.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <AndroidDeviceMock />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              A iPhone device mock component.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <IphoneDeviceMock />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              A iPad device mock component.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <IpadDeviceMock />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              A iPad device mock component.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <SafariAppMock url="soheil.salmani.me" />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              A showcase of an app on multiple devices.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <AppShowcase />
+          </div>
         </div>
       </main>
     </div>
-  )
+  );
 }

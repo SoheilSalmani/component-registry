@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "acme",
-  "homepage": "https://acme.com",
+  "homepage": "https://soheil.salmani.me",
   "items": [
     {
       "name": "hello-world",
@@ -72,6 +72,71 @@
         },
         {
           "path": "registry/new-york/blocks/example-with-css/example-card.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "android-device-mock",
+      "type": "registry:component",
+      "title": "Android Device Mock",
+      "description": "A component that mocks an Android mobile device.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/android-device-mock.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "iphone-device-mock",
+      "type": "registry:component",
+      "title": "iPhone Device Mock",
+      "description": "A component that mocks an iPhone mobile device.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/iphone-device-mock.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "ipad-device-mock",
+      "type": "registry:component",
+      "title": "iPad Device Mock",
+      "description": "A component that mocks an iPad mobile device.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/ipad-device-mock.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "safari-app-mock",
+      "type": "registry:component",
+      "title": "Safari App Mock",
+      "description": "A component that mocks the Safari web browser on desktop.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/safari-app-mock.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "app-showcase",
+      "type": "registry:component",
+      "title": "App Showcase",
+      "description": "A showcase of an app displayed on multiple devices.",
+      "registryDependencies": [
+        "https://soheil.salmani.me/r/iphone-device-mock.json",
+        "https://soheil.salmani.me/r/ipad-device-mock.json",
+        "https://soheil.salmani.me/r/safari-app-mock.json"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/app-showcase.tsx",
           "type": "registry:component"
         }
       ]
