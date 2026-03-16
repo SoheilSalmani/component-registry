@@ -1,8 +1,33 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://soheil.salmani.me",
+  "name": "wealthfolio",
+  "homepage": "https://soheil.salmani.me/",
   "items": [
+    {
+      "name": "wealthfolio-navigation-menu",
+      "type": "registry:component",
+      "title": "Navigation Menu",
+      "description": "Primitives for building a navigation menu.",
+      "registryDependencies": ["navigation-menu"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/wealthfolio/navigation-menu.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "title": "Navigation Menu",
+      "description": "Primitives for building a navigation menu.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/navigation-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
     {
       "name": "hello-world",
       "type": "registry:component",

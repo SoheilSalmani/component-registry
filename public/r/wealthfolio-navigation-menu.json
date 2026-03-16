@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "wealthfolio-navigation-menu",
+  "type": "registry:component",
+  "title": "Navigation Menu",
+  "description": "Primitives for building a navigation menu.",
+  "registryDependencies": [
+    "navigation-menu"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/blocks/wealthfolio/navigation-menu.tsx",
+      "content": "import {\n  NavigationMenu,\n  NavigationMenuList,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuBadge,\n} from \"@/registry/new-york/ui/navigation-menu\";\nimport Link from \"next/link\";\n\nfunction _NavigationMenu(\n  props: React.ComponentPropsWithRef<typeof NavigationMenu>,\n) {\n  return (\n    <NavigationMenu {...props}>\n      <NavigationMenuList>\n        <NavigationMenuItem>\n          <NavigationMenuLink asChild>\n            <Link href=\"features\">Features</Link>\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuLink asChild>\n            <Link href=\"connect\">\n              Connect\n              <NavigationMenuBadge>New</NavigationMenuBadge>\n            </Link>\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuLink asChild>\n            <Link href=\"add-ons\">Add-ons</Link>\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuLink asChild>\n            <Link href=\"docs\">Docs</Link>\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuLink asChild>\n            <Link href=\"blog\">Blog</Link>\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n      </NavigationMenuList>\n    </NavigationMenu>\n  );\n}\n\nexport { _NavigationMenu as NavigationMenu };\n",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -14,6 +14,7 @@ import { YCombinatorLogomark } from "@/registry/logos/ycombinator/ycombinator-lo
 import { ProductHuntLogomark } from "@/registry/logos/product-hunt/product-hunt-logomark";
 import { XLogomark } from "@/registry/logos/x/x-logomark";
 import { DiscordLogomark } from "@/registry/logos/discord/discord-logomark";
+import { NavigationMenu } from "@/registry/new-york/blocks/wealthfolio/navigation-menu";
 
 export default function Page() {
   return (
@@ -191,6 +192,18 @@ export default function Page() {
           </div>
           <div className="flex items-center justify-center min-h-[400px] relative">
             <DiscordLogomark />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              A navigation menu component.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <NavigationMenu />
           </div>
         </div>
       </main>
