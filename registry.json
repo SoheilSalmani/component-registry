@@ -8,7 +8,9 @@
       "type": "registry:component",
       "title": "Navigation Menu",
       "description": "Primitives for building a navigation menu.",
-      "registryDependencies": ["navigation-menu"],
+      "registryDependencies": [
+        "https://soheil.salmani.me/r/navigation-menu.json"
+      ],
       "files": [
         {
           "path": "registry/new-york/blocks/wealthfolio/navigation-menu.tsx",
