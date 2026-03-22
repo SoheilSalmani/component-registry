@@ -15,10 +15,35 @@ import { ProductHuntLogomark } from "@/registry/logos/product-hunt/product-hunt-
 import { XLogomark } from "@/registry/logos/x/x-logomark";
 import { DiscordLogomark } from "@/registry/logos/discord/discord-logomark";
 import { NavigationMenu } from "@/registry/new-york/blocks/wealthfolio/navigation-menu";
+import { LovedByTheOSSCommunity } from "@/registry/new-york/blocks/wealthfolio/loved-by-the-oss-community";
+import { SocialButtonLinks } from "@/registry/new-york/blocks/wealthfolio/social-button-links";
+import { AvailableFor } from "@/registry/new-york/blocks/wealthfolio/available-for";
+import {
+  HeadingContainer,
+  HeadingContent,
+  HeadingLabel,
+  HeadingLabelIcon,
+} from "@/registry/new-york/ui/heading";
+import { DownloadIcon, PuzzleIcon } from "lucide-react";
+import {
+  Hero,
+  HeroActions,
+  HeroDescription,
+  HeroShowcase,
+  HeroTitle,
+} from "@/registry/new-york/ui/hero";
+import { Mark } from "@/registry/new-york/ui/mark";
+import { Button } from "@/registry/new-york/ui/button";
+import Link from "next/link";
+import { SiteHeader } from "@/registry/new-york/blocks/wealthfolio/site-header";
+import { ThemeToggle } from "@/registry/new-york/ui/theme-toggle";
+import { FeatureCards } from "@/registry/new-york/blocks/wealthfolio/feature-cards";
+import { CardWithMetrics } from "@/registry/new-york/blocks/wealthfolio/card-with-metrics";
+import { FeatureCarousel } from "@/registry/new-york/blocks/wealthfolio/feature-carousel";
 
 export default function Page() {
   return (
-    <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
+    <div className="max-w-6xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
       <header className="flex flex-col gap-1">
         <h1 className="text-3xl font-bold tracking-tight">Custom Registry</h1>
         <p className="text-muted-foreground">
@@ -204,6 +229,169 @@ export default function Page() {
           </div>
           <div className="flex items-center justify-center min-h-[400px] relative">
             <NavigationMenu />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Loved by the open-source community.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <LovedByTheOSSCommunity />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Links for social medias.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <SocialButtonLinks />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Available for.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <AvailableFor devices={["mobile", "tablet", "desktop", "web"]} />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Heading with label.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <HeadingContainer>
+              <HeadingLabel>
+                <HeadingLabelIcon>
+                  <PuzzleIcon />
+                </HeadingLabelIcon>
+                Extensibility
+              </HeadingLabel>
+              <HeadingContent>
+                <h2>
+                  Extend with
+                  <br />
+                  <em>powerful add-ons</em>
+                </h2>
+              </HeadingContent>
+            </HeadingContainer>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Hero section.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <Hero>
+              <HeroTitle>
+                Grow Wealth.
+                <br />
+                <em>Keep Control.</em>
+              </HeroTitle>
+              <HeroDescription>
+                A beautiful, <Mark>private</Mark> and <Mark>open-source</Mark>{" "}
+                investment tracker that runs locally on all your devices.
+              </HeroDescription>
+              <HeroActions>
+                <Button
+                  className="rounded-full font-mono font-light uppercase"
+                  size="xl"
+                  asChild
+                >
+                  <Link href="download">
+                    Get Wealthfolio <DownloadIcon />
+                  </Link>
+                </Button>
+              </HeroActions>
+              <HeroShowcase>
+                <AppShowcase
+                  browserUrl="wealthfolio.app"
+                  mobileImageSrc="screenshots/mobile.png"
+                  tabletImageSrc="screenshots/tablet.png"
+                  browserImageSrc="screenshots/desktop.png"
+                />
+              </HeroShowcase>
+            </Hero>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Theme toggle.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <ThemeToggle theme="light" />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Site header.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <SiteHeader />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Feature cards.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <FeatureCards />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Card with metrics.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <CardWithMetrics />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Carousel of app features.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <FeatureCarousel />
           </div>
         </div>
       </main>
