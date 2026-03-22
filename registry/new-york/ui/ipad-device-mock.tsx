@@ -1,6 +1,6 @@
 "use client";
 
-import type { SVGProps } from "react";
+import { useId, type SVGProps } from "react";
 
 export interface IpadDeviceMockProps extends SVGProps<SVGSVGElement> {
   width?: number;
@@ -16,6 +16,8 @@ export default function IpadDeviceMock({
   videoSrc,
   ...props
 }: IpadDeviceMockProps) {
+  const clipPathId = useId();
+
   return (
     <svg
       aria-label="iPad"
@@ -107,7 +109,7 @@ export default function IpadDeviceMock({
           width="676"
           height="1065"
           preserveAspectRatio="xMidYMid slice"
-          clipPath="url(#roundedCorners)"
+          clipPath={`url(#${clipPathId})`}
         />
       )}
 
@@ -117,7 +119,7 @@ export default function IpadDeviceMock({
           y="34"
           width="676"
           height="1065"
-          clipPath="url(#roundedCorners)"
+          clipPath={`url(#${clipPathId})`}
         >
           <video
             autoPlay
@@ -145,7 +147,7 @@ export default function IpadDeviceMock({
       />
 
       <defs>
-        <clipPath id="roundedCorners">
+        <clipPath id={clipPathId}>
           <rect x="34" y="34" width="676" height="1065" rx="36" />
         </clipPath>
       </defs>

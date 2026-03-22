@@ -1,6 +1,6 @@
 "use client";
 
-import type { SVGProps } from "react";
+import { useId, type SVGProps } from "react";
 
 export interface IphoneDeviceMockProps extends SVGProps<SVGSVGElement> {
   width?: number;
@@ -16,6 +16,8 @@ export default function IphoneDeviceMock({
   videoSrc,
   ...props
 }: IphoneDeviceMockProps) {
+  const clipPathId = useId();
+
   return (
     <svg
       aria-label="iPhone 15 Pro"
@@ -76,7 +78,7 @@ export default function IphoneDeviceMock({
 
       {imageSrc && (
         <image
-          clipPath="url(#roundedCorners)"
+          clipPath={`url(#${clipPathId})`}
           height="843.5"
           href={imageSrc}
           preserveAspectRatio="xMidYMid slice"
@@ -87,7 +89,7 @@ export default function IphoneDeviceMock({
       )}
       {videoSrc && (
         <foreignObject
-          clipPath="url(#roundedCorners)"
+          clipPath={`url(#${clipPathId})`}
           height="843.5"
           width="389.5"
           x="21.25"
@@ -116,7 +118,7 @@ export default function IphoneDeviceMock({
         d="M254 48.5C254 45.4624 256.462 43 259.5 43C262.538 43 265 45.4624 265 48.5C265 51.5376 262.538 54 259.5 54C256.462 54 254 51.5376 254 48.5Z"
       />
       <defs>
-        <clipPath id="roundedCorners">
+        <clipPath id={clipPathId}>
           <rect
             height="843.5"
             rx="55.75"
