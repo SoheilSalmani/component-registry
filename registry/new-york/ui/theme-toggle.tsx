@@ -4,7 +4,7 @@ import * as React from "react";
 
 import { Button } from "@/registry/new-york/ui/button";
 import { MoonIcon, SunIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/lib/utils";
 
 type ThemeToggleProps = {
   theme: "light" | "dark";
