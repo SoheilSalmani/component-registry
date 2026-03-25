@@ -46,6 +46,7 @@ import {
   ComponentPreviewFrame,
   ComponentPreviewViewport,
 } from "@/components/component-preview";
+import { Particles } from "@/registry/personal/ui/particles";
 
 export default function Page() {
   return (
@@ -404,6 +405,23 @@ export default function Page() {
           <div className="flex items-center justify-center min-h-[400px] relative">
             <FeatureCarousel />
           </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Particles background.
+            </h2>
+            <OpenInV0Button name="example-with-css" className="w-fit" />
+          </div>
+          <ComponentPreview initialPreset="md">
+            <ComponentPreviewControls />
+            <ComponentPreviewViewport>
+              <ComponentPreviewFrame className="min-h-96">
+                <Particles />
+              </ComponentPreviewFrame>
+            </ComponentPreviewViewport>
+          </ComponentPreview>
         </div>
       </main>
     </div>
