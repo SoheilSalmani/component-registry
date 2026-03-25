@@ -40,6 +40,12 @@ import { ThemeToggle } from "@/registry/new-york/ui/theme-toggle";
 import { FeatureCards } from "@/registry/new-york/blocks/wealthfolio/feature-cards";
 import { CardWithMetrics } from "@/registry/new-york/blocks/wealthfolio/card-with-metrics";
 import { FeatureCarousel } from "@/registry/new-york/blocks/wealthfolio/feature-carousel";
+import {
+  ComponentPreview,
+  ComponentPreviewControls,
+  ComponentPreviewFrame,
+  ComponentPreviewViewport,
+} from "@/components/component-preview";
 
 export default function Page() {
   return (
@@ -51,19 +57,19 @@ export default function Page() {
         </p>
       </header>
       <main className="flex flex-col flex-1 gap-8">
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               A simple hello world component
             </h2>
             <OpenInV0Button name="hello-world" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="flex items-center justify-center relative">
             <HelloWorld />
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               A contact form with Zod validation.
@@ -75,7 +81,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               A complex component showing hooks, libs and components.
@@ -87,32 +93,32 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               A login form with a CSS file.
             </h2>
             <OpenInV0Button name="example-with-css" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="flex items-center justify-center relative">
             <ExampleCard />
           </div>
           Home
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               A Android device mock component.
             </h2>
             <OpenInV0Button name="example-with-css" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="flex items-center justify-center relative">
             <AndroidDeviceMock />
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               A iPhone device mock component.
@@ -124,31 +130,31 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               A iPad device mock component.
             </h2>
             <OpenInV0Button name="example-with-css" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="flex items-center justify-center relative">
             <IpadDeviceMock />
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               A iPad device mock component.
             </h2>
             <OpenInV0Button name="example-with-css" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="flex items-center justify-center relative">
             <SafariAppMock url="soheil.salmani.me" />
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               A showcase of an app on multiple devices.
@@ -160,43 +166,43 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               The GitHub logomark.
             </h2>
             <OpenInV0Button name="example-with-css" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="flex items-center justify-center relative">
             <GitHubLogomark />
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               The YCombinator logomark.
             </h2>
             <OpenInV0Button name="example-with-css" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="flex items-center justify-center relative">
             <YCombinatorLogomark />
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               The Product Hunt logomark.
             </h2>
             <OpenInV0Button name="example-with-css" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="flex items-center justify-center relative">
             <ProductHuntLogomark />
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               The X logomark.
@@ -208,7 +214,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               The Discord logomark.
@@ -220,28 +226,33 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               A navigation menu component.
             </h2>
             <OpenInV0Button name="example-with-css" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="flex items-center justify-center relative">
             <NavigationMenu />
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="flex flex-col gap-4 border rounded-lg p-4 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               Loved by the open-source community.
             </h2>
             <OpenInV0Button name="example-with-css" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
-            <LovedByTheOSSCommunity />
-          </div>
+          <ComponentPreview initialPreset="md">
+            <ComponentPreviewControls />
+            <ComponentPreviewViewport>
+              <ComponentPreviewFrame>
+                <LovedByTheOSSCommunity />
+              </ComponentPreviewFrame>
+            </ComponentPreviewViewport>
+          </ComponentPreview>
         </div>
 
         <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
